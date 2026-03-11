@@ -15,6 +15,7 @@
 .env
 .env.local
 .env.production
+.env.*
 
 # Uploaded files
 /uploads/*
@@ -56,3 +57,12 @@ src/app/\(public\)/
 src/components/admin/
 src/components/menu/
 next-env.d.ts
+
+# Deployment configs (keep templates, ignore generated)
+render.yaml
+railway.json
+
+# Debug/setup scripts (optional for production)
+setup.php
+fix-login.php
+test-db.php
