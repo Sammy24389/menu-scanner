@@ -1,33 +1,19 @@
 {
-    "name": "menu-scanner",
+    "name": "sammy24389/menu-scanner",
     "description": "PHP QR Code Menu Scanner System for Lounges and Restaurants",
     "version": "1.0.0",
     "type": "project",
     "require": {
         "php": ">=8.0",
         "ext-pdo": "*",
-        "ext-json": "*",
-        "chillerlan/php-qrcode": "^4.3"
+        "ext-json": "*"
     },
     "require-dev": {
-    },
-    "autoload": {
-        "psr-4": {
-            "MenuScanner\\": "src/"
-        }
     },
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "echo 'Menu Scanner System installed successfully!'"
-        ],
-        "post-update-cmd": [
-            "echo 'Menu Scanner System updated successfully!'"
-        ]
     },
     "minimum-stability": "stable",
     "prefer-stable": true
