@@ -1,0 +1,323 @@
+/**
+ * Customer Menu Styles
+ * Mobile-first design for customer-facing menu
+ */
+
+:root {
+    --primary-color: #667eea;
+    --primary-dark: #5a67d8;
+    --secondary-color: #764ba2;
+    --accent-color: #f59e0b;
+    --text-dark: #1f2937;
+    --text-muted: #6b7280;
+    --bg-light: #f9fafb;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding-bottom: 2rem;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 1.5rem 0;
+    margin-bottom: 1rem;
+}
+
+.header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.header .opacity-75 {
+    opacity: 0.9;
+}
+
+/* Call waiter button */
+.btn-call-waiter {
+    background-color: white;
+    color: var(--primary-color);
+    font-weight: 600;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-call-waiter:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    background-color: #f8f9fa;
+}
+
+.btn-call-waiter i {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* Category Navigation */
+.category-nav {
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0.5rem 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.category-nav .nav-pills {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.category-nav .nav-pills::-webkit-scrollbar {
+    display: none;
+}
+
+.category-nav .nav-link {
+    color: var(--text-muted);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    white-space: nowrap;
+    margin-right: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.category-nav .nav-link:hover {
+    background-color: #f3f4f6;
+    color: var(--primary-color);
+}
+
+.category-nav .nav-link.active {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+}
+
+/* Menu Content */
+.menu-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Category Section */
+.category-section {
+    scroll-margin-top: 80px;
+}
+
+.category-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    position: relative;
+    display: inline-block;
+}
+
+.category-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border-radius: 2px;
+}
+
+/* Menu Item Card */
+.menu-item-card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.menu-item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item-image {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.menu-item-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.menu-item-card .card-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Price Badge */
+.price-badge {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 0.35rem 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+/* Variations Section */
+.variations-section {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+.variation-select {
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    font-size: 0.85rem;
+}
+
+.variation-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Modal Customization */
+.modal-content {
+    border-radius: 1rem;
+    border: none;
+}
+
+.modal-header {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+/* Footer */
+.footer {
+    background-color: white;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-item-card {
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Loading State */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Toast Notification */
+.toast-notification {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    transition: transform 0.3s ease;
+}
+
+.toast-notification.show {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .btn-call-waiter span {
+        display: none;
+    }
+    
+    .btn-call-waiter i {
+        margin-right: 0;
+    }
+    
+    .category-nav .nav-link {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .menu-item-image {
+        height: 160px;
+    }
+    
+    .modal-dialog {
+        margin: 1rem;
+    }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-light: #111827;
+        --text-dark: #f9fafb;
+        --text-muted: #9ca3af;
+    }
+    
+    body {
+        background-color: var(--bg-light);
+    }
+    
+    .category-nav,
+    .menu-item-card,
+    .footer,
+    .modal-content {
+        background-color: #1f2937;
+        color: var(--text-dark);
+    }
+    
+    .category-nav {
+        border-bottom-color: #374151;
+    }
+    
+    .menu-item-card .card-title {
+        color: var(--text-dark);
+    }
+    
+    .variation-select {
+        background-color: #374151;
+        border-color: #4b5563;
+        color: var(--text-dark);
+    }
+}

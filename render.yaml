@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: menu-scanner
+    env: php
+    region: oregon
+    plan: free
+    buildCommand: chmod +x render-build.sh && ./render-build.sh
+    startCommand: "php -S 0.0.0.0:$PORT -t public"
+    envVars:
+      - key: PHP_VERSION
+        value: 8.2.0
+      - key: USE_SQLITE
+        value: "true"
+    disk:
+      name: data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1
+    disks:
+      - name: uploads
+        mountPath: /opt/render/project/src/uploads
+        sizeGB: 1
