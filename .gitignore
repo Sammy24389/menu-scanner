@@ -1,34 +1,26 @@
 # PHP Menu Scanner System - Git Ignore
 
-# Dependencies
+# PHP Dependencies
 /vendor/
 /composer.lock
-
-# Node.js / Next.js (not used)
-/node_modules/
-.next/
-/out/
-/build/
-*.log
 
 # Environment files
 .env
 .env.local
-.env.production
 .env.*
 
-# Uploaded files
+# Uploaded files (keep directory, ignore contents)
 /uploads/*
 !/uploads/.gitkeep
 
 # Generated QR codes
 /public/qr/*
 
-# SQLite database (generated)
+# SQLite database (generated at runtime)
 /data/*
 !/data/.gitkeep
 
-# IDE and Editor files
+# IDE and Editor
 .vscode/
 .idea/
 *.swp
@@ -37,32 +29,19 @@
 .DS_Store
 Thumbs.db
 
+# Logs
+*.log
+
 # Cache
 /cache/
 *.cache
 
-# Temporary files
+# Temporary
 tmp/
 temp/
 *.tmp
 
-# TypeScript build artifacts
-src/components/ui/
-src/lib/supabase/
-src/middleware.ts
-src/types/
-src/app/\(admin\)/
-src/app/\(auth\)/
-src/app/\(public\)/
-src/components/admin/
-src/components/menu/
-next-env.d.ts
-
-# Deployment configs (keep templates, ignore generated)
+# Deployment configs (keep for reference)
 render.yaml
 railway.json
-
-# Debug/setup scripts (optional for production)
-setup.php
-fix-login.php
-test-db.php
+Dockerfile
