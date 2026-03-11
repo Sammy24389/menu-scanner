@@ -6,7 +6,7 @@
 
 // Check for environment variables (Render, etc.)
 $dbHost = getenv('DB_HOST') ?: 'localhost';
-$dbPort = getenv('DB_PORT') ?: 3308;
+$dbPort = getenv('DB_PORT') ?: 3306;
 $dbName = getenv('DB_NAME') ?: 'menu_scanner';
 $dbUser = getenv('DB_USER') ?: 'root';
 $dbPass = getenv('DB_PASS') ?: '';
